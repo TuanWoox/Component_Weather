@@ -12,7 +12,7 @@ export default function App() {
       <h2>WEATHER CITY FETCHING APPLICATION</h2>
       <Input location={location} setLocation={setLocation} />
       {isLoading && <p className="loader">The data is being fethed...</p>}
-      {weather?.weathercode && (
+      {weather?.weathercode && !isLoading && (
         <WeatherPanel displayLocation={displayLocation} weather={weather} />
       )}
     </div>

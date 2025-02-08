@@ -43,8 +43,6 @@ export function useFetchWeather(location) {
       getWeather();
       return () => {
         controller.abort();
-        setWeather({});
-        setDisplayLocation("");
       };
     },
     [location]
